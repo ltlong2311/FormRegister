@@ -1,0 +1,254 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Form Register</title>
+	<link rel="stylesheet" type="text/css" href="css/register.css"/>
+	<link rel="shortcut icon" type="image/png" href="images/14512838-golden-font-type-letter-l.jpg"/>
+	<script type="text/javascript" src="./js/register.js"></script>
+	</head>
+	
+	<body>
+		<div class="container" id="main">
+	      <div class="banner">
+	      	<h2>REGISTER</h2>
+		  </div>
+	      <div id="body">
+			<div id="content1">
+			    <div class="login">
+			    	<div><h3 style="text-align: center; font-size: 25px; color: #363642;">LOGIN</h3></div>
+					<label for="username">Username</label>:<input id="username" type ="text" name="username"/>
+					<br>
+					<br>Password: <input type = "text" name = "password" />
+					
+					<button> Reset </button> <button> Login </button>
+					
+					<a href="home.html" title="home"><br>Home</a>
+					<a href="register.html" title="register"><br>Register</a>
+					<a href="introduction.html" title="introduction"><br>Introduction</a>
+					<a href="contact.html" title="contact"><br>Contact</a>
+					<a href="help.html" title="help"><br>Help</a>
+				</div>
+				<div class="get-inf">
+					<button onclick="getCheck();return false;">Checkbox</button>
+					<button onclick="getRadio()">Radio</button>
+					<button onclick="getSelect()">Select</button>
+					<div class="va"><button onclick="View()"> View All </button></div>
+					<p id="get1"></p><p id="get2"></p><p id="get3"></p>
+				</div>	
+				<script type="text/javascript">
+					function getCheck() {
+
+						var checks = document.getElementsByClassName('checks');
+						var str = '';
+						for (i=0; i<4; i++) {
+					        if (checks[i].checked === true){
+					            str += checks[i].value + ' ';
+					        }
+						}
+						alert(str);
+						var gt = document.getElementById("get1");
+					    gt.innerHTML = str;
+					}
+					function getRadio() {
+						var rad = document.getElementsByName('gioitinh');
+						var fm = '';
+						if (rad[0].checked){
+							fm = "Male";
+							alert("Male");
+						}
+						else if (rad[1].checked){
+							fm = "Female";
+							alert("Female");
+						}
+						var mf = document.getElementById("get2");
+					    mf.innerHTML = fm;
+					}
+					function getSelect() {
+						var sel = document.getElementById("list").value;
+						console.log(sel);
+						alert(sel);
+						var se = document.getElementById("get3");
+					    se.innerHTML = sel;
+					}
+ 				</script>
+			</div>
+				
+			<div id="content2">
+			<span style="color: #e7e7e7;font-size: 25px;"><strong>Wecome To Your </strong></span><span style="color: orange;font-size: 25px;"><strong>Photo Size</strong></span>
+			</div>
+			
+			<div id="content3">
+			  <div id="form-register">
+				<h1 style="text-align: center;color:cyan;font-size: 20px">Register Form</h1>
+				<form name="register-form" action="#">
+			    <div class="infor">
+			      <label>Username:</label>
+			      <div class="inp">
+				    <input id="username-register" type = "text" name = "username" />
+				  </div>
+		        </div>
+		        <div class="infor">
+		          <label>Password:</label> 
+		          <div class="inp">
+				    <input id="password-register" type = "password" name = "password" />
+				  </div> 
+				</div>
+				<div class="infor">
+		          <label>Confirm Password:</label>
+		          <div class="inp">
+				    <input id="confirm" type = "password" name = "confirm" />
+				  </div>
+		        </div>
+		        <div class="infor">
+				  <label>Gender:</label> 
+				  <div class="select">
+				    <input id="male" name="gioitinh" type="radio" value="Male" /><label> Male</label>
+			        <br>		      
+		            <input id="female" name="gioitinh" type="radio" value="Female" /><label> Female</label>			
+		          </div>
+				</div>
+				<div class="infor pl">
+				   <label>Address:</label>
+				   <div class="area"> 
+				      <textarea id="address" rows="4" cols="35"></textarea>
+				   </div>
+				</div>
+				<div class="infor">   
+				   <label>Mail:</label>
+				   <div class="inp">
+				     <input id="mail" type = "text" name = "mail" />
+				   </div>
+				</div>
+				<div class="infor">
+				  <label>Programing Languages</label>
+				  <div class="check">
+					  <input type="checkbox" class="checks" name="languages" value="PHP"> PHP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			          <input type="checkbox" class="checks" name="languages" value="Java"> Java
+					  <br>
+			          <input type="checkbox" class="checks" name="languages" value="ASP.NET"> ASP.NET
+					  <input type="checkbox" class="checks" name="languages" value="C++"> C++
+				  </div>	  
+				</div>
+				<div class="infor pt">
+				  <label>Skill:</label>
+				  <div class="select2">
+					<select id="list" name="skill">
+					  <option value="excellent">excellent</option>
+					  <option value="normal">normal</option>
+					  <option value="bad">bad</option>
+					</select>
+				   </div>  
+				</div>   
+			    </form>
+			    <div class="submit">
+					<button onclick="Register()" id="register-f"> Register </button>
+					<button onclick="ResetForm()" id="reset-f"> Reset </button>
+					<button type="reset" value="reset" type="reset" onclick="window.location.reload()">Clear All</button>
+				</div>
+			   </div>
+			 </div>
+		   </div>
+		</div> 
+		
+	    <script type="text/javascript">
+	    	function Regis(){
+			    var name = document.getElementById("username-register").value;
+			    var pass = document.getElementById("password-register").value;
+			    var mail = document.getElementById("mail").value;
+			    var ads = document.getElementById("address").value;
+			    alert("username: "+name+" ; password: "+pass+ " ; mail: "+mail+ " ; address: "+ads);
+
+
+			}
+	    	function Register(){
+
+    			var main = document.getElementById("main");
+				main.classList.toggle("active"); 
+				var popup = document.getElementById("popup");
+				popup.classList.toggle("active");   
+
+				var username = document.getElementById("username-register").value;
+	            var password = document.getElementById("password-register").value;
+	            var mail = document.getElementById("mail").value;
+	            var address = document.getElementById("address").value;
+	            var gender = document.getElementsByName("gioitinh");
+	            var gen = "";
+	            for(var i = 0; i < gender.length; i++){
+	                if(gender[i].checked){
+	                    if(gender[i].value === "Nam"){
+	                        gen = "Male"
+	                    } else {
+	                        gen = "Female";
+	                    }
+	                }
+	            }
+	       
+	            var languages = document.getElementsByName("languages");
+	            var lang = [];
+	            for(var i = 0; i < languages.length; i++){
+	                if(languages[i].checked){
+	                    lang.push((languages[i].value).toUpperCase());
+	                }
+	            }
+	            var skill = document.getElementById("list").value;
+
+	            var view = document.getElementById("suc");
+	            view.innerHTML = "Username: " + username + "<br/>";
+	            view.innerHTML += "Password: " + password + "<br/>";
+	            view.innerHTML += "Mail: " + mail + "<br/>";
+	            view.innerHTML += "Address: " + address + "<br/>";
+	            view.innerHTML += "Gender: " + gen + "<br/>";
+	            view.innerHTML += "Programming Languages: " + lang.join(", ") + "<br/>";
+	            view.innerHTML += "Skill: " + skill + "<br/>";
+	            return false;   
+			} 
+	        function ResetForm(){
+	        	/*document.getElementById("username").reset();*/
+	        	document.getElementById("username-register").value = "";
+	        	document.getElementById("password-register").value = "";
+	        	document.getElementById("confirm").value = "";
+	        	document.getElementById("address").value = "";
+	        	document.getElementById("mail").value = "";
+                
+                var frm_elements = Form.elements; 
+
+	        	for (i = 0; i < frm_elements.length; i++){
+				    field_type = frm_elements[i].type.toLowerCase();
+				    switch (field_type){
+				    /*case "text":
+				    case "password":
+				    case "textarea":
+				    case "hidden":
+				        frm_elements[i].value = "";
+				        break;*/
+				    case "radio":
+				    case "checkbox":
+				        if (frm_elements[i].checked)
+				        {
+				            frm_elements[i].checked = false;
+				        }
+				        break;
+				    case "select-one":
+				    case "select-multi":
+				        frm_elements[i].selectedIndex = -1;
+				        break;
+				    default:
+				        break;
+				        }
+				    }
+	            }  
+
+	    </script>
+	    <div id="popup">
+			<h2>Register success!</h2>
+			<hr>
+            <div><p>Bạn đã đăng ký thành công, chào mừng gia nhập!<p></div>
+			<div><p id="suc"></p></div>
+            <div class="end"><a href="" onclick="Register()">Finish</a></div>
+
+		</div>  
+		<!-- <div id="show"><p id="view"></p></div> -->
+
+	</body>
+</html>

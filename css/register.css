@@ -1,0 +1,221 @@
+body{
+  margin: 0 auto;
+  width: 1100px;
+  position: relative;
+  z-index: 1;
+  display: block;
+  background: url(../images/form-background.jpg);
+}
+a{
+  text-decoration: none;
+}
+.banner{
+  width: 1100px;
+  margin: 0;
+  height: auto;
+}
+.body{
+  margin: 0px;
+}
+.banner h2{
+  font-size: 35px;
+  padding-bottom: 25px;
+  padding-top: 20px;
+  color: cyan;
+  text-align: center;
+}
+#content1{
+  background:#e7e7e7;
+  color: inherit;
+  width: 30%;
+  height: 628px;
+  float: left;
+}
+#content2{
+  background-color:#007bff ;
+  width: 70%;
+  float:left;
+  text-align: center;
+}
+
+#content3{
+  background:#363642;
+  float:left;
+  width: 70%;
+  height: 600px;
+  color:#e7e7e7;
+}
+.login{
+  margin: 45px 50px 20px 50px;
+}
+.login input{
+  width: 230px;
+  border: 1px solid #007bff;
+  margin-top: 5px;
+}
+.login button{
+  margin: 20px 25px 30px; 
+  /* border-radius: 0px; */
+}    
+#form-register{
+  margin: 10px 60px;
+} 
+
+#form-register input{
+  /* position: relative;
+  left: 300px; */
+}
+#form-register .infor{
+  margin: 25px 30px;
+  /* display: inline-block; */
+}
+#form-register .submit{
+  margin: 50px auto;
+}
+#form-register .infor .inp{
+  margin-right: 10px;
+  float: right;
+}
+#form-register .infor .inp input{
+  width: 300px;
+}
+#form-register .select{
+  margin-right: 20px;
+  float: right;
+  width: 300px;
+}
+#form-register .area{
+  margin: 0px 15px 0px 15px;
+  float: right;
+  width: 300px;
+}
+#form-register .area textarea{
+  overflow: scroll;
+}
+#form-register .pl{
+  padding-top: 10px;
+  padding-bottom: 15px;
+  height: 65px;
+}
+#form-register .check{
+  margin-right: 20px;
+  float: right;
+  width: 300px;
+}
+#form-register .check label{
+  margin-right: 40px;
+}
+#form-register .select2{
+  margin-right: 15px;
+  float: right;
+  width: 300px;
+  padding-top: 0px;
+}
+#form-register .pt{
+  padding-top: 15px;
+}
+#form-register .submit{
+  margin: 65px auto;
+  text-align: center;
+}
+#form-register .submit button{
+  margin-left: 20px;
+}
+#form-register .submit button:hover{
+  box-shadow: 1px 1px;
+  background-color:#e7e7e7;
+}
+.container{
+  /* transition: 0,1s; */
+}
+.container#main.active{
+  filter: blur(3px); /*  làm mờ */
+/*   filter: brightness(40%); giảm độ sáng
+filter: contrast(50%);  độ tương phản
+filter: grayscale(60%); độ xám //Chỉ có thể áp dụng 1 thuộc tính cho filter*/
+ /*  pointer-events: none;
+  user-select: none;  */
+}
+
+/* #show{
+  position: fixed;
+  top: 40%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  width: 320px;
+  padding: 5px;
+  border: 1px solid cyan;
+  box-shadow: 0 5px 30px rgba(0,0,0,.30);
+  background: #fff;
+  color: black;
+  z-index: 10;
+} */
+#popup{
+  position: fixed;
+  top: 40%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  width: 320px;
+  padding: 5px;
+  border: 1px solid cyan;
+  box-shadow: 0 5px 30px rgba(0,0,0,.30);
+  background: #fff;
+  color: black;
+  font-family: 'Poppins', sans-serif;
+  visibility: hidden;
+  opacity: 0; 
+  transition: 0,3s;  /* chuyển đổi sau 0,3s */
+  z-index: 999;
+}
+#popup h2{
+   text-align: center;
+   color: red;
+}
+#popup div{
+  margin: 2px 48px;
+}
+#popup .end a{
+  padding: 0px 5px 0px 5px; 
+  font-size:18px;
+  text-align: center;
+  align-items: center;
+  color: #fff;
+}
+#popup .end{
+  margin: 5px auto;
+  max-width: 60px;
+  border: 1px solid #111;
+  background-color: #007bff;
+  border-radius: 2px;
+}
+#popup.active{
+  top: 50%;
+  visibility: visible;
+  opacity: 1; 
+   transition: 0,1s; 
+  filter: blur(0px);
+}
+#popup p{
+  text-align: center;
+  font-size: 18px;
+  font-family: 'Poppins', sans-serif;
+}
+.get-inf p{
+  margin-top: 5px;
+  padding-top: 15px;
+  font-size: 15px;
+  color: red;
+  text-align: center;
+}
+.get-inf{
+  margin: 30px 60px;
+}
+.get-inf button{
+  margin-left: 4px;
+}
+.get-inf .va{
+  align-items: center;
+  margin: 10px 5px;
+  padding-left: 30%;
+
+}
